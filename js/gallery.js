@@ -111,5 +111,7 @@ images.map((image) => {
   </li>
   `;
 
-  imgGallery.innerHTML += galleryForm;
+  // imgGallery.innerHTML += galleryForm;
+
+  imgGallery.insertAdjacentHTML("beforeend", galleryForm);
 });

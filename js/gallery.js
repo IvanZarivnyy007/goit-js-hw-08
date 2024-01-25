@@ -96,8 +96,9 @@ imgGallery.addEventListener("click", (event) => {
   }
 });
 
-images.map((image) => {
-  let galleryForm = `
+const template = images
+  .map((image) => {
+    return `
   <li class="gallery-item">
       <a class="gallery-link" href="${image.original}">
           <img
@@ -110,8 +111,9 @@ images.map((image) => {
       </a>
   </li>
   `;
+  })
+  .join("");
 
-  // imgGallery.innerHTML += galleryForm;
+imgGallery.innerHTML = template;
 
-  imgGallery.insertAdjacentHTML("beforeend", galleryForm);
-});
+// imgGallery.insertAdjacentHTML("beforeend", temlate);
